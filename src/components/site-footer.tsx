@@ -29,7 +29,9 @@ export function SiteFooter() {
             <a href="https://instagram.com" className="hover:text-terracotta">Instagram</a>
             <span className="text-navy/30">/</span>
             <a href="https://facebook.com" className="hover:text-terracotta">Facebook</a>
-            <span className="ml-2">maroi.com</span>
+            <a href="https://maroi.es" className="ml-2 hover:text-terracotta">
+              maroi.es
+            </a>
           </div>
         </div>
       </div>
