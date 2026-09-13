@@ -116,5 +116,5 @@ export const JOURNAL_IMAGES: Record<string, string> = {
   "cinco-vidas-de-una-chaqueta": "/images/chaqueta-safari-detalle.jpg",
   "menos-prendas-mas-posibilidades": "/images/look-blazer-crudo.jpg",
   "la-elegancia-se-hereda-y-se-reinventa": "/images/blazer.jpg",
-  "la-sobremesa-como-forma-de-lujo": "/images/escena-terraza.jpg",
+  "la-sobremesa-como-forma-de-lujo": "/images/terraza-olivo.jpg",
 };

@@ -1,51 +1,49 @@
+import Image from "next/image";
 import Link from "next/link";
-import { MediaPlaceholder } from "@/components/media-placeholder";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ivory">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-stretch sm:grid-cols-2">
-        <div className="flex flex-col justify-center gap-6 px-6 py-16 sm:px-10 lg:px-16">
-          <h1 className="font-serif text-6xl leading-none tracking-tight text-navy sm:text-7xl">
-            MAROI
-          </h1>
-          <div className="h-px w-10 bg-navy/40" />
-          <p className="font-sans text-xs uppercase tracking-widest-lg text-navy/60">
+    <section className="relative flex min-h-[600px] items-end overflow-hidden sm:min-h-[620px] sm:items-center lg:h-[84vh]">
+      <Image
+        src="/images/hero-home.jpg"
+        alt="Chaqueta safari de lino sobre un acantilado mediterráneo"
+        fill
+        priority
+        quality={90}
+        sizes="100vw"
+        className="object-cover"
+        style={{ objectPosition: "center 28%" }}
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,#F5F1EA_0%,rgba(245,241,234,0.92)_34%,rgba(245,241,234,0.35)_62%,rgba(245,241,234,0.15)_100%)] sm:bg-[linear-gradient(to_right,#F5F1EA_0%,rgba(245,241,234,0.94)_18%,rgba(245,241,234,0.45)_36%,rgba(245,241,234,0)_56%)]" />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-14 sm:px-10 lg:px-16">
+        <div className="max-w-xs sm:max-w-sm">
+          <div className="h-px w-10 bg-navy/50" />
+          <p className="mt-6 font-sans text-xs uppercase tracking-widest-lg text-navy/70">
             Mediterranean Lifestyle
           </p>
-          <p className="font-serif text-2xl italic leading-snug text-navy/90 sm:text-3xl">
+          <p className="mt-7 font-serif text-3xl italic leading-snug text-navy sm:text-4xl">
             More than clothing.
             <br />A way of life.
           </p>
-          <p className="font-sans text-[11px] uppercase tracking-widest-lg text-navy/50">
+          <p className="mt-7 font-sans text-[11px] uppercase tracking-widest-lg text-navy/60">
             Marbella · Madrid · Ibiza · The World
           </p>
           <Link
             href="/la-marca"
-            className="mt-4 inline-block w-fit border-b border-navy/60 pb-1 font-sans text-xs uppercase tracking-widest-lg text-navy transition-colors hover:border-navy hover:text-terracotta"
+            className="mt-9 inline-block border-b border-navy/60 pb-1 font-sans text-xs uppercase tracking-widest-lg text-navy transition-colors hover:border-terracotta hover:text-terracotta"
           >
             Descubrir la marca
           </Link>
         </div>
-
-        <div className="relative order-first h-[60vh] sm:order-none sm:h-auto">
-          <MediaPlaceholder
-            label="Chaqueta safari de lino sobre acantilado mediterráneo"
-            src="/images/hero-home.jpg"
-            tone="sky"
-            priority
-            sizes="(max-width: 640px) 100vw, 50vw"
-            position="center 30%"
-            className="h-full"
-          />
-          <ul className="absolute right-6 top-6 space-y-1 text-right font-sans text-[11px] uppercase tracking-widest-lg text-navy/70 sm:right-10 sm:top-10">
-            <li>Natural</li>
-            <li>Elegant</li>
-            <li>Timeless</li>
-            <li>Mediterranean</li>
-          </ul>
-        </div>
       </div>
+
+      <ul className="absolute right-6 top-8 z-10 space-y-1.5 text-right font-sans text-[11px] uppercase tracking-widest-lg text-navy/75 sm:right-10 sm:top-12">
+        <li>Natural</li>
+        <li>Elegant</li>
+        <li>Timeless</li>
+        <li>Mediterranean</li>
+      </ul>
     </section>
   );
 }

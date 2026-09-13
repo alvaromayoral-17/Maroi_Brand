@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { MediaPlaceholder } from "@/components/media-placeholder";
 
+const CARD_SCRIM =
+  "pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(to_top,rgba(58,58,60,0.62)_0%,rgba(58,58,60,0.34)_38%,rgba(58,58,60,0)_100%)]";
+
 export function LifestyleGrid() {
   return (
     <section className="border-t border-navy/10 bg-ivory py-14 sm:py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-5 sm:grid-cols-3 sm:gap-5 sm:px-8">
-        <Link href="/la-marca" className="group relative block aspect-[4/5] overflow-hidden">
+        <Link href="/paleta" className="group relative block aspect-[4/5] overflow-hidden">
           <MediaPlaceholder
             label="Etiqueta MAROI sobre lino: tailoring, resort, field"
             src="/images/etiqueta.jpg"
@@ -13,18 +16,28 @@ export function LifestyleGrid() {
             sizes="(max-width: 640px) 100vw, 33vw"
             className="h-full transition-transform duration-700 group-hover:scale-[1.03]"
           />
+          <div className={CARD_SCRIM} />
+          <div className="absolute inset-x-0 bottom-0 p-6 text-ivory [text-shadow:0_1px_10px_rgba(22,36,63,0.9),0_1px_3px_rgba(22,36,63,0.8)]">
+            <p className="font-serif text-lg tracking-[0.1em]">Nuestra paleta</p>
+            <p className="mt-2 font-sans text-[10px] uppercase tracking-widest-lg text-ivory/70">
+              Esencia del Mediterráneo
+            </p>
+            <p className="mt-2 inline-block border-b border-ivory/50 pb-0.5 font-sans text-[10px] uppercase tracking-widest-lg">
+              Descubrir →
+            </p>
+          </div>
         </Link>
 
-        <Link href="/la-marca" className="group relative block aspect-[4/5] overflow-hidden">
+        <Link href="/places" className="group relative block aspect-[4/5] overflow-hidden">
           <MediaPlaceholder
             label="Cala mediterránea al atardecer"
             src="/images/cala-atardecer.jpg"
             tone="sky"
             dark
-            overlay
             sizes="(max-width: 640px) 100vw, 33vw"
             className="h-full"
           />
+          <div className={CARD_SCRIM} />
           <div className="absolute inset-x-0 bottom-0 p-6 text-ivory">
             <p className="font-serif text-lg tracking-[0.1em]">MAROI Places</p>
             <p className="mt-2 font-sans text-[10px] uppercase tracking-widest-lg text-ivory/70">
@@ -39,13 +52,13 @@ export function LifestyleGrid() {
         <Link href="/la-marca" className="group relative block aspect-[4/5] overflow-hidden">
           <MediaPlaceholder
             label="Terraza con olivo frente al mar"
-            src="/images/escena-terraza.jpg"
+            src="/images/terraza-olivo.jpg"
             tone="olive"
             dark
-            overlay
             sizes="(max-width: 640px) 100vw, 33vw"
             className="h-full"
           />
+          <div className={CARD_SCRIM} />
           <div className="absolute inset-x-0 bottom-0 p-6 text-ivory">
             <p className="font-serif text-lg tracking-[0.1em]">Journal</p>
             <p className="mt-2 font-sans text-[10px] uppercase tracking-widest-lg text-ivory/70">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MediaPlaceholder } from "@/components/media-placeholder";
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function A3Page() {
       <section className="relative flex h-[70vh] items-end overflow-hidden sm:h-[85vh]">
         <MediaPlaceholder
           label="Tres amigos jóvenes bajo la luz mediterránea"
-          src="/images/a3-trio.jpg"
+          src="/images/a3-generacion.jpg"
           tone="terracotta"
           dark
           overlay
@@ -136,14 +137,16 @@ export default function A3Page() {
         </div>
       </section>
 
-      <section className="border-t border-navy/10 bg-navy py-16 text-ivory sm:py-20">
-        <div className="mx-auto max-w-2xl px-5 text-center sm:px-8">
-          <p className="font-serif text-2xl tracking-[0.1em]">
-            A<sup className="text-sm">3</sup> BY MAROI
-          </p>
-          <p className="mt-2 font-sans text-[11px] uppercase tracking-widest-lg text-ivory/60">
-            A new generation of elegance
-          </p>
+      <section className="border-t border-navy/10 bg-navy py-20 sm:py-24">
+        <div className="mx-auto flex max-w-2xl justify-center px-5 sm:px-8">
+          <Image
+            src="/images/a3-logo-ivory.png"
+            alt="A³ by MAROI — Mediterranean Lifestyle. The Art of Living."
+            width={961}
+            height={681}
+            sizes="(max-width: 640px) 240px, 320px"
+            className="h-auto w-[240px] sm:w-[320px]"
+          />
         </div>
       </section>
     </>

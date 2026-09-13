@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
@@ -8,6 +9,7 @@ const NAV = [
   { href: "/hombre", label: "Hombre" },
   { href: "/a3", label: "A³" },
   { href: "/la-marca", label: "La Marca" },
+  { href: "/places", label: "Places" },
   { href: "/journal", label: "Journal" },
 ];
 
@@ -17,13 +19,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy/10 bg-ivory/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
-        <Link href="/" className="shrink-0 leading-none">
-          <span className="block font-serif text-2xl tracking-[0.18em] text-navy sm:text-[26px]">
-            MAROI
-          </span>
-          <span className="mt-1.5 block font-sans text-[8px] uppercase tracking-[0.3em] text-navy/55 sm:text-[9px]">
-            Mediterranean Lifestyle
-          </span>
+        <Link href="/" className="shrink-0" aria-label="MAROI, ir al inicio">
+          <Image
+            src="/images/maroi-logo.png"
+            alt="MAROI — Mediterranean Lifestyle"
+            width={1276}
+            height={365}
+            priority
+            sizes="(max-width: 640px) 134px, 166px"
+            className="h-auto w-[134px] sm:w-[166px]"
+          />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

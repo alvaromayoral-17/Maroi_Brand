@@ -50,7 +50,7 @@ export function MediaPlaceholder({
           style={position ? { objectPosition: position } : undefined}
         />
         {overlay && (
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/15 to-navy/10" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(22,36,63,0.78)_0%,rgba(22,36,63,0.34)_26%,rgba(22,36,63,0)_54%)]" />
         )}
       </div>
     );

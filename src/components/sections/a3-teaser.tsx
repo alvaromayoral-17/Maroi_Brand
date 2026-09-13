@@ -29,7 +29,7 @@ export function A3Teaser() {
         <div className="aspect-[16/10] w-full overflow-hidden">
           <MediaPlaceholder
             label="A³ — grupo de amigos jóvenes, look mediterráneo relajado"
-            src="/images/a3-trio.jpg"
+            src="/images/a3-generacion.jpg"
             tone="terracotta"
             dark
             sizes="(max-width: 640px) 100vw, 55vw"

@@ -191,7 +191,7 @@ export default function LaMarcaPage() {
           <div className="aspect-[4/5] overflow-hidden">
             <MediaPlaceholder
               label="Dos generaciones, la misma sensibilidad mediterránea"
-              src="/images/a3-trio.jpg"
+              src="/images/a3-generacion.jpg"
               tone="stone"
               sizes="(max-width: 640px) 100vw, 50vw"
               className="h-full"
